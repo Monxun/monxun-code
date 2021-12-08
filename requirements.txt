@@ -10,3 +10,4 @@ vectorbt
 yfinance
 tabulate
 django-heroku
+django-widget-tweaks
