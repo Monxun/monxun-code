@@ -8,11 +8,6 @@ from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView
 
-import json
-import jsonpickle
-
-import requests
-
 from .vbt_scripts import stocktwits_model
 from .vbt_scripts import feature_flags as gtff
 from .vbt_scripts.stocktwits_view import display_bullbear
