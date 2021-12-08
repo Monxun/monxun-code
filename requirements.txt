@@ -14,4 +14,3 @@ django-widget-tweaks
 whitenoise
 gunicorn
 pylibmc
-django-ninja
