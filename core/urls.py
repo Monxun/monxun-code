@@ -21,8 +21,3 @@ urlpatterns = [
     path('', include('home.urls')),
 ]
 
-API_PATTERNS = [
-    path('api/', api.urls)
-]
-
-urlpatterns += API_PATTERNS
