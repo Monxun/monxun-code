@@ -9,3 +9,4 @@ numpy
 vectorbt
 yfinance
 tabulate
+django-heroku
