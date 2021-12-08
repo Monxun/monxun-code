@@ -162,7 +162,7 @@ STATICFILES_DIRS = [
     'home/static',
     
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # DIR GETS CREATED UPON RUNNING COMMAND collectstaticfiles OR WHATEVER
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
