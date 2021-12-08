@@ -12,3 +12,4 @@ tabulate
 django-heroku
 django-widget-tweaks
 whitenoise
+gunicorn
