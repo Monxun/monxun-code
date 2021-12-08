@@ -11,3 +11,4 @@ yfinance
 tabulate
 django-heroku
 django-widget-tweaks
+django-allauth
