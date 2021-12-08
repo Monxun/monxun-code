@@ -134,7 +134,6 @@ python-dotenv==0.19.2
 python3-openid==3.2.0
 pytz==2021.1
 pytz-deprecation-shim
-pywinpty==1.1.4
 PyYAML
 pyzmq==22.3.0
 Quandl
