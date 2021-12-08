@@ -9,7 +9,6 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView
 
 from .vbt_scripts import stocktwits_model
-from .vbt_scripts import feature_flags as gtff
 from .vbt_scripts.stocktwits_view import display_bullbear
 from .vbt_scripts.vbt_view2 import GetStockData, RunBacktests
 
