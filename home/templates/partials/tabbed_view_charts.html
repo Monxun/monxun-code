@@ -1,0 +1,30 @@
+{% load static %}
+
+<div id="main_dash" class="row">
+    <div class="col-md-12 py-3">
+      <ul class="nav nav-tabs">
+        <li class="nav-item"> <a href="" class="nav-link active" data-toggle="tab" data-target="#tabone">SALES</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="" data-toggle="tab" data-target="#tabtwo">SEASONALITY</a> </li>
+        <li class="nav-item"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabthree">DESEASON</a> </li>
+        <li class="nav-item"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabthree">DETREND</a> </li>
+        <li class="nav-item"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabthree">FORECAST</a> </li>
+      </ul>
+      <div class="tab-content mt-2">
+        <div class="tab-pane fade active show" id="tabone" role="tabpanel">
+          <img class="img-fluid d-block mx-auto py-3 round-corners" src="{% static 'assets/images/charts/M_sales.svg' %}" padding="10px">
+        </div>
+        <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+          <img class="img-fluid d-block mx-auto py-3 round-corners" src="{% static 'assets/images/charts/M_seasonal.svg' %}" padding="10px">
+        </div>
+        <div class="tab-pane fade" id="tabthree" role="tabpanel">
+          <img class="img-fluid d-block mx-auto py-3 round-corners" src="{% static 'assets/images/charts/M_deseasonalizer.svg' %}" padding="10px">
+        </div>
+        <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+          <img class="img-fluid d-block mx-auto py-3 round-corners" src="{% static 'assets/images/charts/M_detrender.svg' %}" padding="10px">
+        </div>
+        <div class="tab-pane fade" id="tabthree" role="tabpanel">
+          <img class="img-fluid d-block mx-auto py-3 round-corners" src="{% static 'assets/images/charts/M_forecast.svg' %}" padding="10px">
+        </div>
+      </div>
+    </div>
+</div>

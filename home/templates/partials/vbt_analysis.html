@@ -1,0 +1,89 @@
+{% load static %}
+{% load widget_tweaks %}
+
+
+<div class="grid-flex" flex-direction="column" height="stretch">
+
+  <div class="container">
+    <div class="row">
+      <div id="cards_div" class="p-0">
+        <div class="container">
+          
+          <div class="row">
+
+            <div class="col-md-4">
+              <div class="card text-white bg-dark mb-2 mt-2">
+                <div class="card-header">NEWS</div>
+                <div class="card-body">
+  
+                  <marquee width="60%" direction="up" height="100px">
+                    {% if news %}
+                        <ul class="text-light bg-dark">
+                            {% for item in news %}
+                              {% for i in item %}
+                                <li class="list-group-item text-light bg-dark">{{ item }}: {{ i }}</li>
+                              {% endfor %}
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>You do not have any news...</p>
+                    {% endif %}
+                  </marquee>
+  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-white bg-dark mb-2 mt-2">
+                <div class="card-header">{{ symbol }} METRICS</div>
+                <div class="card-body">
+                  
+                  <marquee width="60%" direction="up" height="100px">
+                    {% if info %}
+                        <ul>
+                            {% for item in info %}
+                              <li class="list-group-item text-light bg-dark">{{ item }} {{ item.value }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>You do not have any info...</p>
+                    {% endif %}
+                  </marquee>
+      
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-white bg-dark mb-2 mt-2">
+                <div class="card-header">SENTIMENT</div>
+                <div class="card-body">
+                  <p>BULLISH / BEARISH</p>
+                  <li class="list-group-item text-light bg-dark">{{ sentiment }}</li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div id="chart_div" class="text-center grid-flex" width="80vw">
+      <div id="chart-view">
+        {% include 'partials/chart-view.html' %}
+      </div>
+    </div>
+  </div>
+  
+  <!-- BUILT FROM OHLCV INFO -->
+  <div class="row" position="relative">
+
+    <div class="col-md-9">
+        <div id="backtest-div" position="relative" class="mt-2 mb-5 text-center">
+          <div id="backtest-create">
+            {% include 'partials/vbt-backtest-form.html' %}
+          </div>
+        </div>
+      </div>
+</div>

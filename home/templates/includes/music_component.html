@@ -1,0 +1,94 @@
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+</head>
+
+<body>
+  <div class="text-center align-items-center d-flex" style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, 0.1), rgba(44, 62, 80, 0.3)), url(&quot;{% static 'assets/images/backgrounds/music_background_1.jpg' %}&quot;); background-size: cover; background-position: center; background-repeat: no-repeat;" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          {% include 'includes/animations/bird_music.html' %}
+          <img class="img-fluid d-block mx-auto" src="{% static 'assets/images/brand/music.png' %}" style="width: 200px">
+          <h5 class="display-3 mb-4 text-light" contenteditable="true">MUSIC AI</h5>
+          <p class="lead mb-5 text-light">SEARCH | ANALYZE | ENJOY</p> <a class="btn btn-lg mx-1 btn-outline-light" href="#">START</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 bg-light" style="">
+    <div class="container">
+      <div class="row">
+        <div class="p-5 col-md-7 d-flex flex-column justify-content-center">
+          <h3 class="display-4 mb-3">Heaven and earth</h3>
+          <p class="mb-4 lead">Seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing, Oh, would I could describe these conceptions.</p><a class="btn btn-secondary" href="#">ANALYZE</a>
+        </div>
+        <div class="p-5 col-md-5">
+          <img class="img-fluid d-block rounded-circle border border-dark" src="{% static 'assets/images/brand/music.png' %}">
+          <h3 class="mb-3 my-3 text-center">Search a song or artist:</h3>
+          <form>
+            <div class="form-group"> <label>Song</label> <input class="form-control" placeholder="Type here">
+              <div class="form-group py-1"><label>Artist</label><input class="form-control" placeholder="Type here"></div>
+            </div>
+            <button type="submit" class="btn mt-4 btn-block btn-outline-dark p-2"><b>SEARCH</b></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5" style="	background-image: url(C:/Users/mike/Desktop/GIT/backgrounds/wallhaven-dpd8rm.jpg);	background-position: center center;	background-size: cover;	background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"> </li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"> </li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"> </li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active"> <img class="d-block img-fluid w-100" src="https://static.pingendo.com/cover-moon.svg">
+                <div class="carousel-caption">
+                  <h5 class="m-0">Carousel</h5>
+                  <p>with indicators</p>
+                </div>
+              </div>
+              <div class="carousel-item "> <img class="d-block img-fluid w-100" src="https://static.pingendo.com/cover-bubble-dark.svg">
+                <div class="carousel-caption">
+                  <h5 class="m-0">Carousel</h5>
+                  <p>with indicators</p>
+                </div>
+              </div>
+              <div class="carousel-item"> <img class="d-block img-fluid w-100" src="https://static.pingendo.com/cover-bubble-light.svg">
+                <div class="carousel-caption">
+                  <h5 class="m-0">Carousel</h5>
+                  <p>with indicators</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 py-3">
+          <a class="btn btn-light btn-block" href="#">VISUALIZER</a><a class="btn btn-light btn-block" href="#">STATS</a><a class="btn btn-light btn-block" href="#">MIDI</a><a class="btn btn-light btn-block" href="#">BACK</a>
+        </div>
+        <div class="col-md-6 py-3">
+          <div class="card bg-light mb-2">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Light card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

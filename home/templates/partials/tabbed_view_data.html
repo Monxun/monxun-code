@@ -1,0 +1,22 @@
+{% load static %}
+
+<div id="main_dash" class="row">
+    <div class="col-md-12 py-3">
+      <ul class="nav nav-tabs">
+        <li class="nav-item"> <a href="" class="nav-link active" data-toggle="tab" data-target="#tabone">HOLIDAYS</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="" data-toggle="tab" data-target="#tabtwo">OIL</a> </li>
+        <li class="nav-item"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabthree">STORES</a> </li>
+      </ul>
+      <div class="tab-content mt-2">
+        <div class="tab-pane fade round-corners active show" id="tabone" role="tabpanel">
+          {{ holidays.to_html|safe }}
+        </div>
+        <div class="tab-pane fade round-corners" id="tabtwo" role="tabpanel">
+            {{ oil.to_html|safe }}
+        </div>
+        <div class="tab-pane fade round-corners" id="tabthree" role="tabpanel">
+            {{ stores.to_html|safe }}
+        </div>
+      </div>
+    </div>
+</div>

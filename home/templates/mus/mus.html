@@ -1,0 +1,72 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %} Music ML {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+
+{% block stylesheets %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/mus.css' %}">
+
+<style>
+  #music-bg {
+    background-image:
+    linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%),
+    url('{% static "assets/images/backgrounds/music2.jpg" %}');
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 90vh;
+}
+  .fade-me-out.htmx-swapping {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+
+<div id="music-bg" class="banner py-5 text-center parallax background-plax grid-flex bg-image-gradient">
+  <!-- style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, 0.1), rgba(44, 62, 80, 0.3)), url(&quot;&quot;); background-size: cover; background-position: center; background-repeat: no-repeat; height: 90vh;" -->
+  <div class="container elem-to-center">
+    <div class="row " display="block">
+      <div id="music-main" class="col-md-8 mx-auto grid-flex">
+        <div id- class="container" position="absolute">
+          {% include 'includes/animations/bird_music.html' %}
+        </div>
+        <img class="img-fluid d-block mx-auto" src="{% static 'assets/images/brand/music.png' %}" style="width: 200px">
+        <p class="text-light">MUSIC AI</p> 
+
+        <a class="btn mb-5 btn-sm mx-1 btn-outline-light fade-me-out" style="color: white" 
+        hx-post="/get_song_info/" hx-trigger="click" hx-target="#music-main" hw-swap='outerHTML swap:1s'>START</a>
+
+        <!-- on click
+            fetch /get_song_info
+            add .fade-me-out to #music-main
+            settle
+            remove .fade-me-out from #music-main
+            add .fade-me-in to #music-main
+            then put the result into #music-main
+            then settle 
+            then remove .fade-me-in from  -->
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://unpkg.com/hyperscript.org@0.9.1"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% endblock javascripts %}

@@ -1,0 +1,90 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %} VBT BACKTESTER {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.standalone.min.css">
+<link rel="stylesheet" href="{% static 'assets/css/clouds.css' %}" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/clouds.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/vbt.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/nucleo-icons.css' %}" type="text/css">
+<script src="{% static 'assets/js/navbar-ontop.js' %}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">
+<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+<script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+{% endblock stylesheets %}
+
+{% block content %}
+
+<div id="vbt-main" class="py-1 text-center text-white banner parallax background-plax fit-content" style="min-height: 100%; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent,rgba(255, 255, 255, 1)), url(&quot;{% static 'assets/images/backgrounds/vbt_back2.jpg' %}&quot;); background-color: #31f791; background-blend-mode: multiply; background-position: center; background-size: cover; background-repeat: repeat;" >
+  <div class="elem-to-center">
+    <div class="row">
+      <div class="col-md-8 mx-auto justify-content-center">
+        <img class="img-fluid mx-auto floating-2" src="{% static 'assets/images/brand/vbt.png' %}" height="250" width="500">
+        <h1 class="mt-3">FINANCIAL BACKTESTER</h1>
+      </div>
+      <p class="lead mb-0" style="white-space: nowrap;">View Symbol Prices | Analyze Indicators | Create Startegy | Backtest</p>
+      <div class="col-md-5 justify-content-center mx-auto">
+
+        <div id="logo-div">
+          <img class="mt-3" src='https://eodhistoricaldata.com/img/logos/US/{{symbol}}.png' alt="Invalid Ticker..." width="100px" margin="auto"/>
+        </div>
+
+          <form method='POST'>
+              {% csrf_token %}
+          
+              <div class="form-group mt-4 mb-2">
+                  {{ form.symbol.errors }}
+                  {% render_field form.symbol class="form-control text-center" value="GME" hx-post="/vbt_symbol/" hx-trigger="keyup" hx-target="#logo-div" hx-swap="innerHTML" %}
+              </div>  
+              <a class="form-group btn btn-dark m-3" style="text-align:center;"  hx-post="/vbt_analysis/" hx-trigger="click" hx-target="#vbt-main" hw-swap='innerHTML'>START</a>
+            </form>
+            <br>
+            <div id="logo-div">
+              <img class="mt-3" src='{% static "assets/images/brand/mushroom.png" %}' alt="Invalid Ticker..." width="200px" margin="auto"/>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  
+    
+  
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://unpkg.com/hyperscript.org@0.9.1"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"></script>
+<script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="{% static 'assets/js/parallax.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{% static 'assets/js/vbt.js' %}"></script>
+<script>
+$(document).ready(function() {
+    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="tooltip"]').tooltip();
+    $('#datepicker-example').datepicker({
+    calendarWeeks: true,
+    autoclose: true,
+    todayHighlight: true
+    });
+});
+</script>
+{% endblock javascripts %}

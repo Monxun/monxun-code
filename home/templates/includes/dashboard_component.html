@@ -1,0 +1,75 @@
+{% load static %}
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+</head>
+
+<body style="	background-image: url({% static 'assets/images/backgrounds/biz_background.jpg' %});	background-position: center;	background-size: cover;	background-repeat: no-repeat;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 py-5" style=""><img class="img-fluid d-block py-2" src="{% static 'assets/images/brand/biz.png' %}">
+        <div class="row">
+          <div class="col-md-12"><a class="btn btn-light
+btn-block" href="#">Data</a><a class="btn btn-light
+btn-block" href="#">Sales</a><a class="btn btn-light
+btn-block" href="#" contenteditable="true">Seasonality</a><a class="btn btn-light
+btn-block" href="#">Deseason</a><a class="btn btn-light
+btn-block" href="#">Detrend</a><a class="btn btn-light
+btn-block" href="#">Forecast</a></div>
+        </div>
+      </div>
+      <div class="col-md-8" style="">
+        <h1 class="text-light">BIZ ML DASHBOARD</h1>
+        <div class="row">
+          <div class="col-md-12 py-3">
+            <ul class="nav nav-tabs">
+              <li class="nav-item"> <a href="" class="nav-link active" data-toggle="tab" data-target="#tabone">Tab 1</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="" data-toggle="tab" data-target="#tabtwo">Tab 2</a> </li>
+              <li class="nav-item"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabthree">Tab 3</a> </li>
+            </ul>
+            <div class="tab-content mt-2">
+              <div class="tab-pane fade active show" id="tabone" role="tabpanel">
+                <img class="img-fluid d-block mx-auto py-3" src="https://static.pingendo.com/img-placeholder-1.svg">
+                <div class="card">
+                  <div class="card-header"> Header </div>
+                  <div class="card-body">
+                    <h4>Title</h4>
+                    <p>Some quick example text to build on the card title .</p>
+                  </div>
+                </div> 
+              </div>
+              <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+                <img class="img-fluid d-block mx-auto py-3" src="https://static.pingendo.com/img-placeholder-1.svg">
+                <div class="card">
+                  <div class="card-header"> Header </div>
+                  <div class="card-body">
+                    <h4>Title</h4>
+                    <p>Some quick example text to build on the card title .</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabthree" role="tabpanel">
+                <img class="img-fluid d-block mx-auto py-3" src="https://static.pingendo.com/img-placeholder-1.svg">
+                <div class="card">
+                  <div class="card-header"> Header </div>
+                  <div class="card-body">
+                    <h4>Title</h4>
+                    <p>Some quick example text to build on the card title .</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" style=""></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

@@ -1,0 +1,41 @@
+{% load static %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+<div class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- ADD IMAGE TO NAVBAR BRAND -->
+      <a class="navbar-brand" href="{% url 'home' %}">MONXUN CODE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse top-box animatedq fadeInDownq clearfix  text-center justify-content-end" position="absolute" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Creations
+            </a>
+            <ul id='dropdown1' class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'biz' %}">Buziness ML Dash</a></li>
+              <li><a class="dropdown-item" href="{% url 'mus' %}">Music AI</a></li>
+              <li><a class="dropdown-item" href="{% url 'vbt' %}">VBT Fin-Backtester</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Monxun">Git</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Kaggle</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+{% block scripts %}{% endblock scripts %}

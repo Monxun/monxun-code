@@ -1,0 +1,172 @@
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+</head>
+
+<body>
+  <div class="p-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-white bg-dark mb-2 mt-2">
+            <div class="card-header">NEWS</div>
+            <div class="card-body">
+              <h5 class="card-title">Dark card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-white bg-secondary mb-2 mt-2">
+            <div class="card-header">MARKET METRICS</div>
+            <div class="card-body">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-white bg-primary mb-2 mt-2">
+            <div class="card-header">SENTIMENT</div>
+            <div class="card-body">
+              <h5 class="card-title">Primary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-center text-white" style="background-image: url(&quot;https://pingendo.com/site-assets/cover.jpg&quot;); background-position: left top; background-size: 100%; background-repeat: repeat;" >
+    <div class="container">
+      <div class="row" style="">
+        <div class="col-md-8 mx-auto">
+          <img class="img-fluid d-block mx-auto" src="{% static 'assets/images/brand/vbt.png' %}" height="100" width="600">
+          <h1 class="mb-3">FINANCIAL BACKTESTER</h1>
+          <p class="lead mb-0">View ticker prices | analyze indicators | create startegy | test</p> <a class="btn btn-light m-3" href="#">START</a> <img class="img-fluid d-block mx-auto" src="https://static.pingendo.com/img-placeholder-tablet.svg" width="750">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="analysis_div" class="py-3 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1>Know your tools &amp; market</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-6 p-4"> <img class="img-fluid d-block py-3" src="https://static.pingendo.com/img-placeholder-1.svg"><i class="d-block fa fa-3x mb-2 text-muted fa-signal"></i>
+          <h4>Volume</h4>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy.</p>
+        </div>
+        <div class="col-lg-3 col-6 p-4"> <img class="img-fluid d-block py-3" src="https://static.pingendo.com/img-placeholder-1.svg"><i class="d-block fa fa-3x mb-2 text-muted fa-line-chart"></i>
+          <h4> <b>Trends</b></h4>
+          <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+        </div>
+        <div class="col-lg-3 col-6 p-4"> <img class="img-fluid d-block py-3" src="https://static.pingendo.com/img-placeholder-1.svg"><i class="d-block fa fa-3x mb-2 text-muted fa-minus"></i>
+          <h4> <b>Ranging</b></h4>
+          <p>I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me.</p>
+        </div>
+        <div class="col-lg-3 col-6 p-4"> <img class="img-fluid d-block py-3" src="https://static.pingendo.com/img-placeholder-1.svg"><i class="d-block fa fa-3x mb-2 text-muted fa-sign-out"></i>
+          <h4> <b>Entry / Exit</b></h4>
+          <p>Oh, would I could describe these conceptions, could impress upon paper all that is living so full.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="strategy_div" class="py-3 text-center" style="">
+    <div class="container">
+      <div class="row" style="">
+        <div class="col-md-10 text-center mx-auto" style="">
+          <h2 class="mb-4">BUILD STRATEGY FOR: SYMBOL</h2>
+          <ul class="nav nav-pills">
+            <li class="nav-item"> <a href="" class="active nav-link" data-toggle="pill" data-target="#tabone">Indicators</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="" data-toggle="pill" data-target="#tabtwo">Signal Logic</a> </li>
+            <li class="nav-item"> <a href="" class="nav-link" data-toggle="pill" data-target="#tabthree">Summary</a> </li>
+          </ul>
+          <div class="tab-content mt-2">
+            <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+              <div class="col-4 col-md-12 p-3">
+                <h4> <b>INDICATORS</b></h4>
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between align-items-center"> Cras justo odio <span class="badge badge-primary badge-pill">14</span> </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center"> Dapibus ac facilisis in <span class="badge badge-primary badge-pill">2</span> </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center"> Morbi leo risus <span class="badge badge-primary badge-pill">1</span> </li>
+                </ul>
+              </div>
+              <p class="">Which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite.</p>
+            </div>
+            <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+              <div class="col-4 p-4 col-md-12" style="">
+                <h4><b>SIGNAL LOGIC</b></h4>
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between align-items-center"> Cras justo odio <span class="badge badge-primary badge-pill">14</span> </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center"> Dapibus ac facilisis in <span class="badge badge-primary badge-pill">2</span> </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center"> Morbi leo risus <span class="badge badge-primary badge-pill">1</span> </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tabthree" role="tabpanel">
+              <div class="col-4 p-4 col-md-12">
+                <h4><b>SUMMARY</b></h4>
+                <div class="blockquote">
+                  <p class="mb-0">Blockquoute</p>
+                  <div class="blockquote-footer">Someone famous in <cite title="Source Title">My memories</cite></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 py-3"><a class="btn btn-primary" href="#">BACKTEST</a></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="results_div" class="py-5" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="py-3 text-center">RESULTS</h1>
+          <div class="row">
+            <div class="col-3">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item text-center"> <a href="" class="active nav-link" data-toggle="pill" data-target="#tabone">REPORT</a> </li>
+                <li class="nav-item text-center"> <a class="nav-link" href="" data-toggle="pill" data-target="#tabtwo">ANALYSIS</a> </li>
+                <li class="nav-item text-center"> <a href="" class="nav-link" data-toggle="pill" data-target="#tabthree">MISC</a> </li>
+              </ul>
+            </div>
+            <div class="col-9">
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+                  <p class="">In my soul and absorb its power, like the form of a beloved mistress, then I often think with longing. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                </div>
+                <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+                  <p class=""> I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</p>
+                </div>
+                <div class="tab-pane fade" id="tabthree" role="tabpanel">
+                  <p class="">Which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite. When I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" style=""></script>

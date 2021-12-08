@@ -1,0 +1,15 @@
+{% load static %}
+
+<img class="mt-2"src="{% static 'assets/images/brand/backtest.png' %}" alt="backtest" width="200px">
+<div class="round-corners p-2 text-dark">
+    {% if backtests %}
+        <ul class="list-group col-4" style="flex-direction: column;">
+            {% for test in backtests %}
+                <li class="list-group-item text-dark" style="flex-direction: column;">{{ test.symbol }} | {{ test.datetime }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You do not have any backtests...</p>
+    {% endif %}
+</div>
+<button type="submit" class="btn btn-dark text-light btn-sm mt-3">RUN</button>

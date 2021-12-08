@@ -1,0 +1,51 @@
+{% load static %}
+
+<style>
+    .mobile-nav-toggle[aria-expanded='true'] {
+    background-image: url('{% static "images/background.png" %}');
+}
+</style>
+
+<style>
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url('{% static "images/icons/hamburger-icon.png" %}');        background-repeat: no-repeat;
+        background-position: center;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+</style>
+
+<style>
+    .mobile-nav-toggle[aria-expanded='true'] {
+        background-image: url('{% static "images/icons/close-icon.png" %}');
+    }
+</style>
+
+<style>
+    .home {
+        
+        background-image: url('{% static "images/background4.jpg" %}');
+}
+
+@media (min-width: 35rem) {
+    .home {
+        background-position: center center;
+        /* update */
+        background-image: url('{% static "images/background4.jpg" %}');
+    }
+}
+
+@media (min-width: 45rem) {
+    .home {
+        /* update */
+        background-image: url('{% static "images/background4.jpg" %}');
+    }
+} 
+</style>

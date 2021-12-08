@@ -1,0 +1,39 @@
+{% load widget_tweaks %}
+{% load static %}
+
+<div id="music-main" class=" bg-dark grid-flex" style="height: 50vh;">
+  <div id="music-container" class="container round-corners">
+    <img class="img-fluid d-block mx-auto mt-4" src="{% static 'assets/images/brand/music.png' %}" style="width: 200px">
+    <div class="row">
+      <div class="mt-5 col-md-7 flex-column justify-content-center"> 
+        <div id='update_img' class="column">
+          <img class="img-fluid rounded-circle border border-light mb-2" src="{{ spotipy.image }}" style="width: 200px"></div>
+          <p class="mb-3 text-center">Artist: {{ artist }} | Title: {{ title }} </p>
+          <p class="lead">Load a song. Hit analyze. Sit back...</p>
+          <!--  HTMX SWAP WITH "/analyze_song/" VIEW ENDPOINT -->
+          <a class="btn btn-outline-light" style="color: white;" hx-post="/analyze_song/" hx-trigger="click" hx-target="#music-main" hw-swap='outerHTML'>ANALYZE</a>
+        </div>
+            <!-- MUS_FORM HTMX -->
+        <div id="mus_form" class="mt-5 col-md-5 d-flex flex-column justify-content-center mx-auto">
+          <i class="fa fa-3x mb-3 fa-search text-center"></i>
+  
+          <form method='POST'>
+            {% csrf_token %}
+        
+            <div class="form-group mb-3">
+  
+              {{ form.artist.errors }}
+              {% render_field form.artist class="form-control" placeholder=form.artist.label %}
+              
+              <br>
+  
+              {{ form.title.errors }}
+              {% render_field form.title class="form-control" placeholder=form.title.label %}
+            </div>  
+            <a class="form-group btn text-center btn-sm mx-1 btn-outline-light" style="text-align:center;display:block;"  hx-post="/update_song_info/" hx-trigger="click" hx-target="#music-main" hw-swap='outerHTML'>LOAD</a>
+            <a class="btn btn-outline-light mt-2" href="javascript:history.back()">BACK</a>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

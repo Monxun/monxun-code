@@ -1,0 +1,34 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<div class="container align-center col-6 flex-grid" style="position: relative; height: 30vh; width: ">
+  <div class="d-flex justify-content-between align-items-center round-corners bg-dark text-light" style="border-color: black; position: relative; height: 35vh; width: 55vw">
+    <!--  -->
+    <div class="elem-to-center">
+      <form>
+        {% csrf_token %}
+        <div class="row">
+          <h5>ENTRY</h5>
+          {{ form.entry_base.errors }}
+          {% render_field form.backtest_entry class="form-control text-center" placeholder="Select Entry" %}
+        </div>
+
+        <div class="row">
+          <h5 class="mt-2">EXIT</h5>
+          {{ form.exit_base.errors }}
+          {% render_field form.backtest_exit class="form-control text-center" placeholder="Select Exit" %}
+        </div>
+
+        <div class="row">
+          <h5 class="mt-2">STARTING CAPITAL</h5>
+          {{ form.init_cash.errors }}
+          {% render_field form.init_cash class="form-control text-center" placeholder="$$$" %}
+        </div>
+
+        <button type="submit" class="btn btn-dark text-light btn-sm mt-3"
+        hx-post="{% url 'vbt_run_backtest' %}" hx-trigger="click" hx-target="#vbt-main" hw-swap='innerHTML'
+        >RUN BACKTEST</button>
+      </form>
+    </div>
+  </div>
+</div>

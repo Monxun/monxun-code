@@ -1,0 +1,46 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<div id="strategy_div" class="py-3 text-center grid-flex" style="position: relative; background-color: white; border-radius: 5px; border-color: white;">
+  <div class="container" style="position: relative;">
+    <div class="row" style="position: relative;">
+      <div class="col-md-10 text-center mx-auto" style="position: relative;">
+        <h5 class="mb-4">BUILD STRATEGY FOR: {{symbol}}</h5>
+        <ul class="nav nav-pills center">
+          <li class="nav-item"> <a href="" class="active nav-link" data-toggle="pill" data-target="#tabone">INITIALIZE</a> </li>
+          <li class="nav-item"> <a href="" class="active nav-link" data-toggle="pill" data-target="#tabone">ENTRY</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="" data-toggle="pill" data-target="#tabtwo">EXIT</a> </li>
+          <li class="nav-item"> <a href="" class="nav-link" data-toggle="pill" data-target="#tabthree">SUMMARY</a> </li>
+        </ul>
+        <div class="tab-content mt-2">
+          <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+            <div class="col-4 col-md-12 p-3">
+              <div>
+                {% include 'partials/vbt-backtest-form.html' %}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+            <div class="col-4 p-4 col-md-12" style="">
+              <h4><b>SIGNAL LOGIC</b></h4>
+              <ul class="list-group center">
+                <li class="list-group-item d-flex justify-content-between align-items-center"> Cras justo odio <span class="badge badge-primary badge-pill">14</span> </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"> Dapibus ac facilisis in <span class="badge badge-primary badge-pill">2</span> </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"> Morbi leo risus <span class="badge badge-primary badge-pill">1</span> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tabthree" role="tabpanel">
+            <div class="col-4 p-4 col-md-12">
+              <h4><b>SUMMARY</b></h4>
+              <div class="blockquote">
+                <p class="mb-0">Blockquoute</p>
+                <div class="blockquote-footer">Someone famous in <cite title="Source Title">My memories</cite></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

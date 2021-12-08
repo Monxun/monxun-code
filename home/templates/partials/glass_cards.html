@@ -1,0 +1,62 @@
+{% load static %}
+
+<!-- JS SCRIPTS BLOCK -->
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/glass_cards.css' %}">
+{% endblock stylesheets%}
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="glass-container">
+            <div id="cards" class="container">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="{% static 'images/card1.png' %}" alt="">
+                        <h4 class="text-white">MUSIC AI</h4>
+                    </div>
+                    <div class="content">
+                        <a class="nav-link btn btn-outline-light text-light" href="#">Enter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="glass-container">
+            <div id="cards" class="container">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="{% static 'images/card2.jpg' %}" alt="">
+                        <h4 class="text-white">ML DASH</h4>
+                    </div>
+                    <div class="content">
+                        <a class="nav-link btn btn-outline-light text-light" href="#">Enter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="glass-container">
+            <div id="cards" class="container">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="{% static 'images/card3.jpg' %}" alt="">
+                        <h4 class="text-white">FIN VBT</h4>
+                    </div>
+                    <div class="content">
+                        <a class="nav-link btn btn-outline-light text-light" href="#">Enter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% block scripts %}
+{% endblock scripts %}
+

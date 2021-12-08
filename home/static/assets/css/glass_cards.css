@@ -1,0 +1,153 @@
+*
+{
+ margin: 0;
+ padding: 0;
+ font-family: 'Poppins', sans-serif;
+ box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    min-width: 21vw;
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+    margin: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.container .card .content {
+    position: relative;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.container .card #card-icon {
+    opacity: 0.5;
+    transition: 0.5s ease-in-out;
+}
+
+
+.container .card:hover #card-icon {
+    scale: 1.8;
+    opacity: 1;
+    margin-top: 50px;
+}
+
+
+.container .card:hover .content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50px);
+}
+
+.container .card .imgBx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .imgBx {
+    transform: translateY(-100px);
+}
+
+.container .card .imgBx img {
+    max-height: 100%;
+    max-width: 30vw;
+    margin: 0 0 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .imgBx img {
+    position: inherit;
+    transform: translate(0px, -40px) scale(1.4);
+}
+
+.container .card .imgBx h2 {
+    color: fff;
+    font-weight: 600;
+}
+
+
+@media (max-width: 35rem) {
+    .primary-navigation {
+        --underline-gap: .5rem;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+    }
+    
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+    
+    .primary-navigation.underline-indicators > .active {
+       border: 0;
+    }
+    
+    
+    .mobile-nav-toggle:focus-visible {
+        outline: 5px solid white;
+        outline-offset: 5px;
+    }
+
+    #logo1 {
+        display: none;
+    }
+    
+    #logo2 {
+        display: block;
+    }
+
+
+    
+}
+
+
+/* MOBILE */
+@media (min-width: 35em) {
+
+}
+
+/* TABLET */
+@media (min-width: 35em) and (max-width: 44.999em) {
+
+}
+
+/* DESKTOP */
+@media (min-width: 45em) {
+    
+
+    
+   
+}

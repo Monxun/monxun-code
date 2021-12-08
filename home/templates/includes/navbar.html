@@ -1,0 +1,52 @@
+{% load static %}
+
+<header class="primary-header flex"> 
+
+    <div class="logo">
+        <img id="logo1" src="{% static 'images/logo.png' %}" alt="">
+        <img id="logo2" src="{% static 'images/logo-mobile.png' %}" alt="">
+    </div>
+
+    <button class="mobil-nav-toggle" aria-controls="primary-navigation" aria-expanded=false><span class="sr-only">MENU</span></button>
+
+    <nav>
+        <ul id="primary-navigation" data-visible=false class="primary-navigation flex">
+            <li class="active">
+                <a href="index.html">
+                    <span aria-hidden="true">00</span>HOME
+                </a>
+            <li>
+                <a href="creations.html">
+                    <span aria-hidden="true">01</span>CREATIONS
+                </a>
+            <li>
+                <a href="https://github.com/Monxun">
+                    <span aria-hidden="true">02</span>GIT
+                </a>
+            <li>
+                <a  href="https://www.kaggle.com/heirophany">
+                    <span aria-hidden="true">03</span>KAGGLE
+                </a>
+
+            {% if user.is_active %} <!-- checks if user signed in-->
+            <li style="margin-left: auto; margin-right: 0;">
+                <a  href="https://www.kaggle.com/heirophany">
+                    <span aria-hidden="true">03</span>LOGOUT
+                </a>
+            {% else%}
+            <!-- Insert code here to display for users that did not sign in-->
+            <li style="margin-left: auto; margin-right: 0;">
+                <a  href="https://www.kaggle.com/heirophany">
+                    <span aria-hidden="true">03</span>LOGIN
+                </a>
+
+                <li style="margin-left: auto; margin-right: 0;">
+                    <a  href="https://www.kaggle.com/heirophany">
+                        <span aria-hidden="true">03</span>REGISTER
+                    </a>
+            {% endif%}
+    
+        </ul>
+    </nav>
+</header>
+

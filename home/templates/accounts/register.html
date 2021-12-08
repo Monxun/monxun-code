@@ -1,0 +1,39 @@
+{% extends "home/index.html" %}
+
+{% block title %} Login {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+        <style>
+            .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            }
+
+            @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+            }
+        </style>
+    <link href="static/css/login.css" rel="stylesheet">
+{% endblock stylesheets %}
+
+<!-- BODY CONTENT -->
+{% block content %}
+
+<!-- view-source:https://getbootstrap.com/docs/5.1/examples/dashboard/ -->
+
+<h1>Register</h1>
+
+{% include 'includes/login_form.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+{% endblock javascripts %}

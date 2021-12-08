@@ -1,0 +1,110 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+<link rel="stylesheet" href="{% static 'assets/css/biz.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/clouds.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/particles.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'assets/js/particles.js' %}"></script>
+<style>
+#biz-bg {
+    background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%),
+    url('{% static "assets/images/backgrounds/music4.jpg" %}');
+    background-size: cover;
+    padding: 20px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 90vh;
+}
+</style>
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+<div id="particles">
+  <div id="webcoderskull">
+      <div class="container grid-flex">
+        <div class="row">
+          <div class="col-md-4 py-5"><img class="img-fluid d-block py-2" src="{% static 'assets/images/brand/biz.png' %}">
+            <p class="text-light">ML DASHBOARD</p>
+            <div class="row">
+              <!-- # TOGGLE ACTIVE CLASS USING HYPERSCRIPT/HTMX -->
+              <div id="biz-menu" class="col-md-12">
+                <a class="btn btn-light btn-block" hx-post="/charts/" hx-trigger="click" hx-target="#main_dash" hx-swap="outerHTML">Charts</a>
+                <a class="btn btn-light btn-block" hx-post="/dataframes/" hx-trigger="click" hx-target="#main_dash" hx-swap="outerHTML">Data</a>
+                <a class="btn btn-dark btn-block" href="javascript:history.back()">Back</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 flex-grid">
+            <h1 class="text-light">SKTIME - ML Analysis <h1 id="chart-title"></h1></h1>
+  
+              <!-- swap for interactivity -->
+            <div id="main_dash" class="row" background="black">
+              <div class="col-md-12 py-3">
+                <ul class="nav nav-tabs">
+                  <li id="biz" class="nav-item mx-1"> <a href="" class="nav-link active" data-toggle="tab" data-target="#tabone">SALES</a> </li>
+                  <li id="biz" class="nav-item mx-1"> <a class="nav-link" href="" data-toggle="tab" data-target="#tabtwo">SEASONALITY</a> </li>
+                  <li id="biz" class="nav-item mx-1"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabthree">DESEASON</a> </li>
+                  <li id="biz" class="nav-item mx-1"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabthree">DETREND</a> </li>
+                  <li id="biz" class="nav-item mx-1"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabthree">FORECAST</a> </li>
+                </ul>
+  
+                <div class="tab-content mt-2">
+  
+                  <div class="tab-pane fade active show" id="tabone" role="tabpanel">
+                    <img class="img-fluid d-block mx-auto py-3 round-corners" src="{% static 'assets/images/charts/M_sales.svg' %}" padding="10px">
+                  </div>
+  
+                  <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+                    <img class="img-fluid d-block mx-auto py-3 round-corners" src="{% static 'assets/images/charts/M_seasonal.svg' %}" padding="10px">
+                  </div>
+  
+                  <div class="tab-pane fade" id="tabthree" role="tabpanel">
+                    <img class="img-fluid d-block mx-auto py-3 round-corners" src="{% static 'assets/images/charts/M_deseasonalizer.svg' %}" padding="10px">
+                  </div>
+  
+                  <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+                    <img class="img-fluid d-block mx-auto py-3 round-corners" src="{% static 'assets/images/charts/M_detrender.svg' %}" padding="10px">
+                  </div>
+  
+                  <div class="tab-pane fade" id="tabthree" role="tabpanel">
+                    <img class="img-fluid d-block mx-auto py-3 round-corners" src="{% static 'assets/images/charts/M_forecast.svg' %}" padding="10px">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+              <!--  INSERT DATAFRAME HERE -->
+  
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" style=""></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+{% endblock javascripts %}

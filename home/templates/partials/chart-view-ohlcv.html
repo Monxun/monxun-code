@@ -1,0 +1,81 @@
+
+<div class="row round-corners bg-dark p-2">
+
+    <div class="col-12">
+      <div class="card card-chart">
+        <div class="card-header bg-dark">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="flex-grid text-align-left" style="position: relative; height: 5vh;">
+                <span><img class="mb-4 mr-2" src='https://eodhistoricaldata.com/img/logos/US/{{symbol}}.png' width="50px" margin="auto"/><h1 class="center align-center text-light" style='display:inline;'>{{ symbol }}: OHLCV CHART </h1></span>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="btn-group btn-group-toggle float-right mt-1" data-toggle="buttons">
+                <label class="btn btn-sm btn-outline-light btn-simple active" id="0"
+                hx-post="/vbt_ohlcv/" hx-trigger="click" hx-target="#chart-view" hw-swap='innerHTML'
+                >
+                  <input type="radio" name="options" checked>
+                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">OHLCV</span>
+                  <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-single-02"></i>
+                  </span>
+                </label>
+                <label class="btn btn-sm btn-outline-light btn-simple" id="1"
+                hx-post="/vbt_obv/" hx-trigger="click" hx-target="#chart-view" hw-swap='innerHTML'
+                >
+                  <input type="radio" class="d-none d-sm-none" name="options">
+                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">OBV</span>
+                  <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-gift-2"></i>
+                  </span>
+                </label>
+                <label class="btn btn-sm btn-outline-light btn-simple" id="2"
+                hx-post="/vbt_trends/" hx-trigger="click" hx-target="#chart-view" hw-swap='innerHTML'
+                >
+                  <input type="radio" class="d-none" name="options">
+                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">RSI</span>
+                  <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-tap-02"></i>
+                  </span>
+                </label>
+                <label class="btn btn-sm btn-outline-light btn-simple" id="1"
+                hx-post="/vbt_ranging/" hx-trigger="click" hx-target="#chart-view" hw-swap='innerHTML'
+                >
+                  <input type="radio" class="d-none d-sm-none" name="options">
+                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">B-BANDS</span>
+                  <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-gift-2"></i>
+                  </span>
+                </label>
+                <label class="btn btn-sm btn-outline-light btn-simple" id="2"
+                hx-post="/vbt_entry_exit/" hx-trigger="click" hx-target="#chart-view" hw-swap='innerHTML'
+                >
+                  <input type="radio" class="d-none" name="options">
+                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">SMA</span>
+                  <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-tap-02"></i>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <style>
+              .main-svg {
+                position: relative;
+                width: 60vw;
+              }
+    
+              .plotly-graph-div {
+                margin: auto;
+                width: 50%;
+              }
+            </style>
+            {{charts.ohlcv | safe}}
+          </div>
+        </div>
+      </div>
+    </div>
