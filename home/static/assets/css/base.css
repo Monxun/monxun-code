@@ -91,7 +91,6 @@ body {
 
 .background-plax 
 {   
-    /* background-image: url("content/wallhaven-oxrrj7.png"); */
     position: relative;
     background-position: 50% calc(50% + 25.5px);
     background-size: cover;
