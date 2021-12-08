@@ -24,8 +24,6 @@ media_dir = settings.MEDIA_ROOT
 static_dir = settings.STATIC_ROOT   
 
 
-train = pd.read_csv(f'{media_dir}/data/train.csv', parse_dates=['date'])
-
 transactions = pd.read_csv(f'{media_dir}/data/transactions.csv', parse_dates=['date'])
 
 oil = pd.read_csv(f'{media_dir}/data/oil.csv', parse_dates=['date'])
