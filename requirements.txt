@@ -13,3 +13,4 @@ django-heroku
 django-widget-tweaks
 whitenoise
 gunicorn
+pylibmc
