@@ -17,13 +17,13 @@
 <div class="banner py-5 text-center parallax background-plax " style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent, rgba(0, 0, 0, 1)), url(&quot;{% static 'assets/images/backgrounds/home_background.png' %}&quot;); background-size: cover; background-position: center; background-repeat: no-repeat;">
   <div class="mb-5">
     <div class="row my-auto elem-to-center m-auto">
-      <div class="bm-5 col-md-12 center floating-2 text-white center" >
+      <div id="logo-main" class="bm-5 col-md-12 center floating-2 text-white center">
         <div>
-          <img class="" src="{% static 'assets/images/brand/clouds_icon_white.png' %}" width="100px">
+          <img id="home-cloud-icon" src="{% static 'assets/images/brand/clouds_icon_white.png' %}" width="100px">
         </div>
         <img id="home-logo" src="{% static 'assets/images/brand/monxun min logo.png' %}" width="900px">
-        <p>MONXUN CODE | By: Michael Gibney</p>
-        <i class="d-block fa fa-5x mb-2 text-light fas fa-arrow-down"></i>
+        <p id="home-p">MONXUN CODE | By: Michael Gibney</p>
+        <i id="home-arrow" class="d-block fa fa-5x mb-2 text-light fas fa-arrow-down"></i>
       </div>
     </div>
   </div>
@@ -125,7 +125,7 @@
                 <i id="card-icon" class="d-block fa fa-5x text-dark fas fa-search-dollar"></i>
               </div>
               <div class="content card-body">
-                <h5 class="card-title text-dark">Python / VectorBT / Finviz / Gamestonk Terminal / Plotly </h5>
+                <h5 class="card-title text-dark">Python / VectorBT / Finviz / Gamestonk / Plotly </h5>
                 <!-- LINK TO GIT REPO FOR CREATION -->
                 <p class="card-text text-dark">Financial Recon & Backtesting Suite </p> <a href="{% url 'vbt' %}" class="btn btn-dark mb-4">TRY ME</a>
               </div>

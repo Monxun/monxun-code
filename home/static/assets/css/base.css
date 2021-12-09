@@ -3,9 +3,36 @@
 @media (max-width: 576px) {
     #home-logo  {
         width: 300px;
+        margin-right: 55px;
     }
 }
 
+
+@media (max-width: 576px) {
+    #logo-main {
+        margin-right: 55px;
+    }
+}
+
+@media (max-width: 576px) {
+    #home-cloud-icon {
+        margin-right: 55px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    #home-p {
+        margin-right: 55px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    #home-arrow {
+        margin-right: 55px;
+    }
+}
 /* 
 .navbar-brand {
     display: inline-block;
