@@ -33,6 +33,17 @@
         margin-right: 55px;
     }
 }
+
+/* VBT  */
+
+@media (max-width: 576px) {
+    #vbt-logo {
+        width: 50vw;
+        height: 100%;
+    }
+}
+
+
 /* 
 .navbar-brand {
     display: inline-block;
