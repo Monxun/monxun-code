@@ -29,6 +29,12 @@
     backdrop-filter: blur(15px);
 }
 
+@media (max-width: 576px) {
+    .container .card {
+        min-width: 50vw;
+    }
+}
+
 .container .card .content {
     position: relative;
     bottom: 20px;
@@ -41,10 +47,29 @@
     visibility: hidden;
 }
 
+@media (max-width: 576px) {
+    .container .card .content  {
+        opacity: 1;
+        visibility: visible;
+    }
+}
 
 .container .card #card-icon {
     opacity: 0.5;
     transition: 0.5s ease-in-out;
+}
+
+
+@media (max-width: 576px) {
+    .container .card #card-icon  {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .container .card p  {
+        display: none;
+    }
 }
 
 
@@ -80,6 +105,12 @@
     max-width: 30vw;
     margin: 0 0 20px;
     transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 576px) {
+    .container .card .imgBx img {
+        max-width: 50vw;
+    }
 }
 
 .container .card:hover .imgBx img {
