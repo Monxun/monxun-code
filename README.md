@@ -9,7 +9,7 @@
 
 <br />
 
-![Monxun-Code Homepage](homepage.png)
+![Monxun-Code Homepage](https://github.com/Monxun/monxun-code/blob/main/homepage.PNG?raw=true)
 
 
 ## File Structure
