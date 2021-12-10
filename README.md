@@ -23,40 +23,25 @@ Within the download you'll find the following directories and files:
    |    |-- wsgi.py                        # Start the app in production
    |    |-- urls.py                        # Define URLs served by all apps/nodes
    |
-   |-- apps/
+   |-- home/
    |    |
-   |    |-- home/                          # A simple app that serve HTML files
-   |    |    |-- views.py                  # Serve HTML pages for authenticated users
-   |    |    |-- urls.py                   # Define some super simple routes  
+   |    |-- models/                        # Directory for Models
+   |    |    |-- biz_models.py             # Models for Biz ML Dashboard Module
+   |    |    |-- mus_models.py             # Models for Mus Music Module
+   |    |    |-- vbt_models.py             # Models for VBT Module
+   |    |    |-- utils/                    # Simple DB Utils
    |    |
-   |    |-- authentication/                # Handles auth routes (login and register)
-   |    |    |-- urls.py                   # Define authentication routes  
-   |    |    |-- views.py                  # Handles login and registration  
-   |    |    |-- forms.py                  # Define auth forms (login and register) 
+   |    |-- views/                         # Handles page rendering for apps
+   |    |    |-- biz_view.py               # Views for Biz ML Dashboard Module
+   |    |    |-- mus_view.py               # Views for Music Module
+   |    |    |-- vbt_view.py               # Views for VBT Module
+   |    |    |-- vbt_scripts/              # Directory conatining VBT helper scripts
    |    |
    |    |-- static/
    |    |    |-- <css, JS, images>         # CSS files, Javascripts files
    |    |
    |    |-- templates/                     # Templates used to render pages
-   |         |-- includes/                 # HTML chunks and components
-   |         |    |-- navigation.html      # Top menu component
-   |         |    |-- sidebar.html         # Sidebar component
-   |         |    |-- footer.html          # App Footer
-   |         |    |-- scripts.html         # Scripts common to all pages
-   |         |
-   |         |-- layouts/                   # Master pages
-   |         |    |-- base-fullscreen.html  # Used by Authentication pages
-   |         |    |-- base.html             # Used by common pages
-   |         |
-   |         |-- accounts/                  # Authentication pages
-   |         |    |-- login.html            # Login page
-   |         |    |-- register.html         # Register page
-   |         |
-   |         |-- home/                      # UI Kit Pages
-   |              |-- index.html            # Index page
-   |              |-- 404-page.html         # 404 page
-   |              |-- *.html                # All other pages
-   |
+   |         
    |-- requirements.txt                     # Development modules - SQLite storage
    |
    |-- .env                                 # Inject Configuration via Environment
