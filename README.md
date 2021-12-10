@@ -15,8 +15,6 @@
 ## File Structure
 Within the download you'll find the following directories and files:
 
-![Monxun-Code Homepage](https://github.com/Monxun/monxun-code/blob/main/file-structure.PNG?raw=true)
-
 ```bash
 < PROJECT ROOT >
    |
