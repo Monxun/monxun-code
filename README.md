@@ -7,9 +7,13 @@ All front end done with pure HTML5 and CSS/SCSS - Responsiveness of layout still
 
 - DJANGO Backend / Django-Ninja API / Django-Rest-Framework
 - HTMX and Hyperscript used for inline JS functionality / AJAX requests
-- Results of ML Dashboardd derived from Kaggle_Store_Timeseries repo: https://github.com/Monxun/Kaggle_Store_TimeSeries  
+- Results of ML Dashboard derived from Kaggle_Store_Timeseries repo: https://github.com/Monxun/Kaggle_Store_TimeSeries  
 - VBT Backtester App utilizes VectorBT for backtesting, Finviz API and Gamestonk Terminal methods for gathering data.
+- Memcached for Cacheing, Postgres / Mongo DB integration (Postgres in current version)
+- Bootstrap 4-5
 - Deployment scripts: Gunicorn / Nginx with Heroku
+
+*Docker files coming soon*
 
 <br />
 
