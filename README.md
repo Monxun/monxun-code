@@ -2,7 +2,7 @@
 # [Django Portfolio Site](http://monxun-code.herokuapp.com/)
 
 Portfolio Django project highlighting my interests in finance applications, music, and ML using python.
-All front end done by hand - Responsive layout still a WIP. 
+All front end done with pure HTML5 and CSS/SCSS - Responsiveness of layout still a WIP... 
 
 
 - Up-to-date [dependencies](./requirements.txt): **Django 3.2.6 LTS**
