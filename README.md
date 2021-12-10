@@ -5,9 +5,11 @@ Portfolio Django project highlighting my interests in finance applications, musi
 All front end done with pure HTML5 and CSS/SCSS - Responsiveness of layout still a WIP... 
 
 
-- Up-to-date [dependencies](./requirements.txt): **Django 3.2.6 LTS**
-- Session-Based Authentication, Forms validation
-- Deployment scripts: Gunicorn / Nginx
+- DJANGO Backend / Django-Ninja API / Django-Rest-Framework
+- HTMX and Hyperscript used for inline JS functionality / AJAX requests
+- Results of ML Dashboardd derived from Kaggle_Store_Timeseries repo: https://github.com/Monxun/Kaggle_Store_TimeSeries  
+- VBT Backtester App utilizes VectorBT for backtesting, Finviz API and Gamestonk Terminal methods for gathering data.
+- Deployment scripts: Gunicorn / Nginx with Heroku
 
 <br />
 
