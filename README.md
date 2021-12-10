@@ -1,4 +1,4 @@
-# monxun-code
+# Monxun-Code
 # [Django Portfolio Site](http://monxun-code.herokuapp.com/)
 
 Portfolio Django project highlighting my interests in finance applications, music, and ML using python.
@@ -60,3 +60,11 @@ Within the download you'll find the following directories and files:
 
 <br />
 
+# BIZ ML DASHBOARD
+![Monxun-Code Biz](https://github.com/Monxun/monxun-code/blob/main/home/static/assets/images/brand/biz-card.PNG?raw=true)
+
+# MUSIC API INTERFACE
+![Monxun-Code Biz](https://github.com/Monxun/monxun-code/blob/main/home/static/assets/images/brand/mus-card.PNG?raw=true)
+
+# VBT FINANCE BACK TESTER 
+![Monxun-Code Biz](https://github.com/Monxun/monxun-code/blob/main/home/static/assets/images/brand/vbt-card.PNG?raw=true)
