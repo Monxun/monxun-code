@@ -11,4 +11,6 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY ./app /code/app
 
-CMD python app/manage.py runserver 8300
+RUN cd /app
+
+CMD python manage.py runserver 8300
