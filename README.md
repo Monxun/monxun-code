@@ -13,7 +13,18 @@ All front end done with pure HTML5 and CSS/SCSS - Responsiveness of layout still
 - Bootstrap 4-5
 - Deployment scripts: Gunicorn / Nginx with Heroku
 
-*Docker files coming soon*
+
+Step 1:
+
+    docker build -t django-monxun .
+
+Step 2: 
+
+    docker run -d --name Monxun -p 8300:8300 django-monxun
+
+Step 3:
+
+Access app @ 0.0.0.0:8300
 
 <br />
 
