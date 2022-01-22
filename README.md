@@ -20,7 +20,7 @@ Step 1:
 
 Step 2: 
 
-    docker run -d --name Monxun -p 8300:8300 django-monxun
+    docker run -d --name monxun -p 8300:8300 django-monxun
 
 Step 3:
 
